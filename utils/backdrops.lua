@@ -1,5 +1,4 @@
 local wezterm = require('wezterm')
-local colors = require('colors.custom')
 
 -- Seeding random numbers before generating for use
 -- Known issue with lua math library
@@ -27,7 +26,7 @@ function BackDrops:init()
       current_idx = 1,
       images = {},
       images_dir = wezterm.config_dir .. '/backdrops/',
-      focus_color = colors.background,
+      focus_color = '#1f1f28',
       focus_on = false,
    }
    local backdrops = setmetatable(inital, self)
@@ -80,7 +79,7 @@ function BackDrops:_create_opts()
          horizontal_align = 'Center',
       },
       {
-         source = { Color = colors.background },
+         source = { Color = '#1f1f28' },
          height = '120%',
          width = '120%',
          vertical_offset = '-10%',
@@ -150,8 +149,6 @@ function BackDrops:_set_focus_opt(window)
    }
    window:set_config_overrides(opts)
 end
-
-
 
 ---Convert the `files` array to a table of `InputSelector` choices
 ---see: https://wezfurlong.org/wezterm/config/lua/keyassignment/InputSelector.html

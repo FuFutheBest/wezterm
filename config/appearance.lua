@@ -1,6 +1,5 @@
 local gpu_adapters = require('utils.gpu-adapter')
 local backdrops = require('utils.backdrops')
-local colors = require('colors.custom')
 
 return {
    max_fps = 120,
@@ -18,11 +17,11 @@ return {
    default_cursor_style = 'BlinkingBlock',
    cursor_blink_rate = 650,
 
-   -- color scheme
-   colors = colors,
-
    -- background
    background = backdrops:initial_options(false), -- set to true if you want wezterm to start on focus mode
+
+   -- color_scheme
+   color_scheme = 'Fairy Floss Dark (Gogh)',
 
    -- scrollbar
    enable_scroll_bar = true,
