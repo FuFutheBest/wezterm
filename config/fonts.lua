@@ -2,13 +2,17 @@ local wezterm = require('wezterm')
 local platform = require('utils.platform')
 
 -- local font = 'Maple Mono SC NF'
-local font_family = 'JetBrainsMono Nerd Font'
+-- local font_family = 'JetBrainsMono Nerd Font'
 local font_size = 15
 
 return {
-   font = wezterm.font({
-      family = font_family,
-      weight = 'Medium',
+   -- font = wezterm.font({
+   --    family = font_family,
+   --    weight = 'Medium',
+   -- }),
+   font = wezterm.font_with_fallback({
+      'JetBrainsMono Nerd Font',
+      'Sarasa Mono SC',
    }),
    font_size = font_size,
 
